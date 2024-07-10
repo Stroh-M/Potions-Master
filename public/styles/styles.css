@@ -29,6 +29,7 @@ h1.main-heading {
   grid-template-columns: 300px 300px;
   grid-template-rows: 1fr;
   gap: 200px;
+  margin-top: 100px;
 }
 
 .spells-card,
