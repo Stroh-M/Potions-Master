@@ -29,7 +29,8 @@ h1.main-heading {
   grid-template-columns: 300px 300px;
   grid-template-rows: 1fr;
   gap: 200px;
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .spells-card,
@@ -154,12 +155,13 @@ footer {
     padding: 75px;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1028px) {
     .container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         width: 100vw;
+        margin-top: 100px;
     }
 
     .form-grid-container,
@@ -168,6 +170,10 @@ footer {
         justify-content: center;
         flex-wrap: wrap;
         width: 100vw;
+    }
+
+    .form-grid-item {
+        width: 250px;
     }
 }
 
