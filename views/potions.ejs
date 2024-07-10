@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potion Master | Potions</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/potions.css" />
+  </head>
+  <body>
+    <h1><%= content[0].difficulty %> Potions:</h1>
+    <div class="flex-container">
+      <% for (let n = 0; n < content.length; n ++) {%>
+      <div class="flex-item">
+        <h2 class="text"><%= content[n].name %></h2>
+        <p class="text">Difficulty level: <%= content[n].difficulty %></p>
+        <p class="text">Effect: <%= content[n].effect %></p>
+        <p class="text">Characteristics: <%= content[n].characteristics %></p>
+        <details>
+          <summary>
+            <label class="text" for="ul">Ingredients:</label>
+          </summary>
+          <ul>
+            <% if (content[n].ingredients.length !== 0) { %> 
+            <% for (let i = 0; i < content[n].ingredients.length; i++) {%>
+            <li class="text"><%= content[n].ingredients[i].name %></li>
+            <% } %> 
+            <% } else {%>
+            <p>Ingredients Unknown</p>
+            <% } %>
+          </ul>
+        </details>
+      </div>
+      <% } %>
+    </div>
+    <footer>
+      <%- include("footer.ejs") %>
+      <p class="disclaimer">
+        Disclaimer: Some potions don't have information on the ingredients.
+      </p>
+    </footer>
+  </body>
+</html>

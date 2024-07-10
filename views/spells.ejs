@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <title>Potion Master | Spells</title>
+    <link rel="stylesheet" href="/styles/spells.css" />
+  </head>
+  <body>
+    <h1><%= content[0].type %>s:</h1>
+    <article class="flex-container">
+      <div class="flex-container">
+        <% for (let n = 0; n < content.length; n++) { %> 
+            <% if (content[n].incantation !== null) { %>
+            <div class="flex-item">
+                <h2 class="text"><%= content[n].name %></h2>
+                <p class="text">Incantation: <%= content[n].incantation %></p>
+                <p class="text">Type: <%= content[n].type %></p>
+                <p class="text">Effect: <%= content[n].effect %></p>
+                <p class="text">Flash Color: <%= content[n].light %></p>
+            </div>
+            <% } else { %>
+            <div class="flex-item">
+                <h2 class="text"><%= content[n].name %></h2>
+                <p class="text">Incantation: Unavailable</p>
+                <p class="text">Type: <%= content[n].type %></p>
+                <p class="text">Effect: <%= content[n].effect %></p>
+                <p class="text">Flash Color: <%= content[n].light %></p>
+            </div>
+            <%} %>
+        <% } %>
+      </div>
+    </article>
+    <footer><%- include("footer.ejs") %></footer>
+  </body>
+</html>

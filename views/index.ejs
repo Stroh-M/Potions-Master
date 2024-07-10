@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Potion Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="main-heading">Welcome to Potion Master</h1>
+
+      <div class="container">
+        <a href="#potions" class="card-links">
+          <div class="grid-item potions-card">
+            <h2 class="card-text">Potions</h2>
+            <img
+              class="card-image"
+              src="/images/cauldron.jpeg"
+              alt="cauldron"
+              width="200px"
+              loading="eager"
+            />
+          </div>
+        </a>
+
+        <a href="#spells" class="card-links">
+          <div class="grid-item spells-card">
+            <h2 class="card-text">Spells</h2>
+            <img
+              class="card-image"
+              src="/images/wand-image.jpg"
+              alt="spell being cast"
+              width="200px"
+              loading="eager"
+            />
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="spells">
+        <h2 class="spells-heading">Spells</h2>
+        <article class="spells-article">
+          <form class="form-grid-container" action="/spells" method="post">
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Charm"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Conjuration"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Spell"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Transfiguration"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="HealingSpell"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="DarkCharm"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Jinx"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Curse"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="MagicalTransportation"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Hex"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="CounterSpell"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="DarkArts"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="CounterJinx"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="CounterCharm"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="Untransfiguration"
+            />
+            <input
+              class="form-grid-item centered-item"
+              type="submit"
+              name="type"
+              id="type"
+              value="BindingMagicalContract"
+            />
+            <input
+              class="form-grid-item centered-item-2"
+              type="submit"
+              name="type"
+              id="type"
+              value="Vanishment"
+            />
+          </form>
+        </article>
+      </section>
+      <section id="potions">
+        <h2 class="potions-heading">Potions</h2>
+        <article>
+          <form
+            class="potion-form-grid-container"
+            action="/potions"
+            method="post"
+          >
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="difficulty"
+              id="difficulty"
+              value="Beginner"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="difficulty"
+              id="difficulty"
+              value="Moderate"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="difficulty"
+              id="difficulty"
+              value="Advanced"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="difficulty"
+              id="difficulty"
+              value="OrdinaryWizardingLevel"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="difficulty"
+              id="difficulty"
+              value="OneOfAKind"
+            />
+            <input
+              class="form-grid-item"
+              type="submit"
+              name="difficulty"
+              id="difficulty"
+              value="Unknown"
+            />
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <button onclick="window.scrollTo({top: 0, behavior: `smooth` });">
+          ▲
+        </button>
+      </nav>
+      <p>Conjured 🪄 in Brooklyn</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+:root {
+    --gold: #ffab0d;
+    --gray: #6f6c79;
+}
+
+body {
+  background-color: var(--gray);  
+  font-family: "MedievalSharp", cursive;
+  color: var(--gold);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1.main-heading {
+  font-weight: 800;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 1fr;
+  gap: 200px;
+}
+
+.spells-card,
+.potions-card {
+    border: var(--gold) solid 5px;
+    border-top-right-radius: 35px;
+    border-bottom-left-radius: 35px;
+    transition: all .3s;
+}
+
+.card-image {
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.card-links {
+  text-decoration: none;
+  color: var(--gold);
+  display: flex;
+  justify-content: center;
+}
+
+.spells-card:hover,
+.potions-card:hover {
+    background-color: var(--gold);
+    color: var(--gray);
+    border: white solid 5px;
+}
+
+#spells,
+#potions {
+    margin-top: 75px;
+    padding-top: 40px;
+    width: 100vw;
+}
+article {
+    display: flex;
+    justify-content: center;
+}
+
+.form-grid-container {
+    display: grid;
+    grid-template-columns:  repeat(6, 150px);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 25px;
+}
+
+.spells-heading,
+.potions-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-grid-item {
+    font-family: "MedievalSharp", cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gold);
+    width: 300px;
+    background-color: var(--gray);
+    border: var(--gold) solid 5px;
+    margin: 10px;
+    padding: 15px;
+    transition: all .3s;
+    border-top-left-radius: 25px;
+    grid-column: span 2;
+}
+
+.centered-item {
+    grid-area: 6 / 2 / 7 / 4;
+}
+
+.centered-item-2 {
+    grid-area: 6 / 4 / 6 / 7;
+}
+
+.form-grid-item:hover {
+    color: var(--gray);
+    background-color: var(--gold);
+    border: white solid 5px;
+}
+
+.potion-form-grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.back-to-top-link {
+    text-decoration: none;
+    color: var(--gold);
+}
+
+button {
+    padding: 10px;
+    background-color: var(--gray);
+    color: var(--gold);
+    border: var(--gold) solid 5px;
+    border-radius: 15px;
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: var(--gold);
+    color: var(--gray);
+    border-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+} 
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+footer {
+    padding: 75px;
+}
+
+@media (max-width: 1023px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .form-grid-container,
+    .potion-form-grid-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 426px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: 1fr;
+        gap: 45px;
+    }
+    
+    .card-image {
+        width: 150px;
+    }
+}
+
+@media (max-width: 321px) {
+    .container {
+        gap: 20px;
+    }
+
+    .card-image {
+        width: 125px;
+    }
+}
