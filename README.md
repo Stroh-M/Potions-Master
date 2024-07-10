@@ -1,1 +1,1 @@
-u can clone this repository by 
+You can see the website bu cloning it by doing ```git clone https://github.com/Stroh-M/Potions-Master.git```
